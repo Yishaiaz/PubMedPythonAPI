@@ -36,9 +36,9 @@ def docsum_to_str(xmltree):
 if __name__ == '__main__':
     url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
     try1 = "einfo.fcgi"
-    # r = requests.get(url+try1)
-    # xml_res_tree = et.fromstring(r.content)
-    # print(xml_res_tree)
+    r = requests.get(url+try1)
+    xml_res_tree = et.fromstring(r.content)
+    print(xml_res_tree)
     # xml_res_tree = xml_res_tree[0]
     # for item in xml_res_tree.iter('DbList'):
     #     for data in item.iter('DbName'):
